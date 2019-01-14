@@ -1,15 +1,14 @@
 {
-  "name": "wdio-chromedriver-service",
-  "version": "0.1.5",
-  "description": "WebdriverIO service to start & stop ChromeDriver",
-  "main": "index.js",
-  "scripts": {
-    "build": "grunt build",
-    "prepublishOnly": "npm prune && npm run build",
-    "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "mocha --compilers js:babel-register --recursive test/unit",
-    "test:integration": "wdio test/integration/wdio.conf.js"
-  },
+    "name": "@wdio/selenium-standalone-service",
+    "version": "5.2.2",
+    "description": "A WebdriverIO service to start & stop Selenium Standalone",
+    "author": "Christian Bromann <christian@saucelabs.com>",
+    "homepage": "https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-selenium-standalone-service",
+    "license": "MIT",
+    "main": "./build",
+    "engines": {
+        "node": ">= 4.8.5"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atti187/wdio-chromedriver-service.git"
