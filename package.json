@@ -1,5 +1,5 @@
 {
-    "name": "@wdio/selenium-standalone-service",
+    "name": "@wdio/chromedriver-service",
     "version": "5.2.2",
     "description": "A WebdriverIO service to start & stop Selenium Standalone",
     "author": "Christian Bromann <christian@saucelabs.com>",
