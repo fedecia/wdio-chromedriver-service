@@ -1,4 +1,4 @@
-import getFilePath from '../../../lib/utils/getFilePath'
+import getFilePath from '../../../src/utils/getFilePath'
 import path from 'path'
 import assert from 'assert'
 

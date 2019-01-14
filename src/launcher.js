@@ -1,3 +1,4 @@
+import { promisify } from 'util'
 import ChromeDriver from 'chromedriver'
 import fs from 'fs-extra'
 import getFilePath from './utils/getFilePath'
@@ -6,11 +7,13 @@ var binPath = ChromeDriver.path
 
 const DEFAULT_LOG_FILENAME = 'ChromeDriver.txt'
 
-class ChromeDriverLauncher {
+export default class ChromeDriverLauncher {
     constructor () {
         this.chromeDriverLogs = null
         this.chromeDriverArgs = {}
         this.logToStdout = false
+
+        return this
     }
 
     onPrepare (config) {
@@ -51,5 +54,3 @@ class ChromeDriverLauncher {
         this.process.stderr.pipe(logStream)
     }
 }
-
-export default ChromeDriverLauncher

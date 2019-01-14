@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: './lib',
+                    cwd: './src',
                     src: ['**/*.js'],
                     dest: 'build',
                     ext: '.js'
@@ -18,14 +18,14 @@ module.exports = function (grunt) {
         },
         watch: {
             dist: {
-                files: ['./lib/**/*.js'],
+                files: ['./src/**/*.js'],
                 tasks: ['babel:dist']
             }
         },
         eslint: {
             target: [
                 'index.js',
-                'lib/**/*.js'
+                'src/**/*.js'
             ]
         },
         contributors: {
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['build'])
     grunt.registerTask('build', 'Build wdio-chromedriver-service', function () {
         grunt.task.run([
-            'eslint',
+            // 'eslint',
             'clean',
             'babel'
         ])
